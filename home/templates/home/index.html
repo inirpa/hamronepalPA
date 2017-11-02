@@ -30,7 +30,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">हाम्रो नेपाल </a>
+				<a class="navbar-brand" href="http://localhost:8000">हाम्रो नेपाल </a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="topNavBar">
@@ -42,7 +42,7 @@
 					</li>
 
 					<li class=""> 
-						<a href="#">
+						<a href="#review">
 							<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Songs
 						</a>	
 					</li>
@@ -66,7 +66,7 @@
 					</li>
 
 					<li class=""> 
-						<a href="#">
+						<a href="https://www.facebook.com">
 							<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Songs
 						</a>	
 					</li>
@@ -213,7 +213,7 @@
 		</div>
 
 				<div class="row">
-			<div class="memo">	
+			<div class="memo" id="review">	
 				<div class="col-md-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -232,7 +232,30 @@
 									<button class="btn btn-primary">
 										Read More ...
 									</button>
-								</div>
+									<div class="paginate-memo" style="float: left;">
+										{% if is_paginated %}
+										  <ul class="pagination">
+										    {% if page_obj.has_previous %}
+										      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+										    {% else %}
+										      <li class="disabled"><span>&laquo;</span></li>
+										    {% endif %}
+										    {% for i in paginator.page_range %}
+										      {% if page_obj.number == i %}
+										        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+										      {% else %}
+										        <li><a name="review" href="?page={{ i }}#review">{{ i }}</a></li>
+										      {% endif %}
+										    {% endfor %}
+										    {% if page_obj.has_next %}
+										      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+										    {% else %}
+										      <li class="disabled"><span>&raquo;</span></li>
+										    {% endif %}
+										  </ul>
+										{% endif %}	
+									</div>
+								</div>							
 							</div>
 
 							<div class="col-md-4">
@@ -241,7 +264,7 @@
 										<img src="{{ memo.featured_image.url }}" width="100%;">
 									{% endfor %}	
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
 				</div>	

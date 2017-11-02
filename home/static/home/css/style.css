@@ -122,6 +122,7 @@
 	padding-left: 50px;
 	padding-right: 50px;
 	float: right;
+
 }
 
 .offer-image{
@@ -147,4 +148,13 @@
 .site-logo{
   width:150px;
   position: absolute;
+}
+
+.paginate-memo{
+  padding-left: 100px;
+}
+
+.pagination{
+  display: inline;
+  border-radius: 0px;
 }
