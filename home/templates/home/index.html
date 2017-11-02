@@ -2,7 +2,10 @@
 <html>
 <head>
 	{% load staticfiles %}
-	<title>HamroNepal</title>
+	{% for option in blog_options %}
+	
+	<title>{{ option.title }}</title>
+	<link rel="icon" href="{{option.favicon.url}}" type="image/gif" sizes="16x16">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/
 	font-awesome.min.css">
@@ -11,11 +14,12 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}">
+	
 </head>
 <body>
 	<div class="header-image">	
-		<img src="static/images/hamro nepal logo.png" width="150px;" style="position: absolute;">
-		<img src="static/images/header-banner.jpg" width="100%">
+		<img class="site-logo" src="{{option.site_logo.url}}">
+		<img class="header-banner" src="{{option.header_banner.url}}">
 	</div>	
 
 	<nav class="navbar navbar-inverse">
@@ -218,10 +222,10 @@
 						<div class="panel-body">
 							<div class="col-md-8">
 								<div class="review">
-									<h3>David at Poon Hill</h3>
-									I just spent a month in Nepal with Hamro Nepal and had a ball.
-
-									I did Poon Hill trek, 2 days of jungle activities in Chitwan, 3 days of Kathmandu City sight seeings, and a 13 day EBC trek, and a full day Kathmandu Valley day trek, with all things from airport to airport organised by Keshav and his staff, They all went well, with professionalism and due care.  I can not speak any more higher than the quality of the services provided.
+									{% for memo in memos %}
+										<h3>{{ memo.author }}</h3>
+										<p>{{ memo.description }}</p>
+									{% endfor %}
 								</div>
 
 								<div class="read-more">
@@ -233,7 +237,9 @@
 
 							<div class="col-md-4">
 								<div class="review-image">
-									<img src="static/images/david-poon-hill-ebc.jpg" width="100%;">
+									{% for memo in memos %}
+										<img src="{{ memo.featured_image.url }}" width="100%;">
+									{% endfor %}	
 								</div>
 							</div>	
 						</div>
@@ -246,5 +252,6 @@
 	<div class="bottom-section">
 		<img src ="static/images/PoonHill.jpg" width="100%">
 	</div>			
+	{% endfor %}	
 </body>
 </html>

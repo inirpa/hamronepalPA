@@ -23,4 +23,11 @@ class BlogOption(models.Model):
 	def __str__(self):
 		return self.title + ' - ' + str(self.site_logo)	+ ' - ' + str(self.header_banner) + ' - ' + str(self.favicon)
 
-			
+
+class Memo(models.Model):
+	author = models.CharField(max_length = 50)
+	description = models.TextField()
+	featured_image = models.FileField(blank = True)
+
+	def __str__(self):
+		return self.author +' -- '+ self.description + ' -- ' + str(self.featured_image)

@@ -1,0 +1,150 @@
+
+
+.navbar-default .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a {
+  color: #333;
+  border-bottom-color: #439348;
+  transition: border 1s linear;
+  border-bottom: 2px solid transparent;
+ /* padding: 0; removing spacing
+ /* margin: 14px; add spacing*/
+}
+
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #fff;
+  color: #D47970;
+  border-bottom: 2px solid #D47970;
+
+}
+
+.navbar-inverse{
+    border-radius: 0px !important;
+    /*margin-bottom: 0px;*/
+    padding-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: white;
+}
+
+.navbar-brand{
+	font-family:'Satisfy',Cursive;
+}
+
+.panel-default{
+	border-radius: 0px;
+}
+
+.btn-home,.btn-mid-section{
+  background-color: transparent;
+  border-radius: 0px;
+  padding-left: 50px;
+  padding-right: 50px; 
+  border: #D47970 solid 2px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.btn-home:hover,.btn-mid-section:hover{
+  background-color: #AA191B;
+  color: white;
+}
+
+.mid-section,.col-md-4,.panel-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align : center;
+  -moz-box-align    : center;
+  -ms-flex-align    : center;
+  -webkit-align-items : center;
+  align-items : center ;
+  justify-content : center;
+  -webkit-justify-content : center;
+  -webkit-box-pack : center;
+  -moz-box-pack : center;
+  -ms-flex-pack : center;
+}
+
+.panel-body{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.review{
+  padding-right: 0px;
+  text-align: justify;
+  padding-left: 50px;
+  margin-left: 50px; 
+}
+
+.review-image {
+	margin-right: 50px;
+	padding-right: 50px; 
+}
+
+.panel-heading{
+  color : #D47970 !important;
+  font-size: 45px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.memo{
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.packages h4{
+  color : #D47970 !important;
+  font-size: 45px;
+  text-decoration: underline;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.btn-primary{
+	border-radius: 0px !important;
+	padding: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	float: right;
+}
+
+.offer-image{
+  width: 50%;
+  padding: 20px;
+}
+
+.offer-image img{
+  width: 100%;
+}
+
+.offer-description{
+  text-align: justify;
+  width: 75%;
+  padding: 10px;
+}
+
+
+.header-banner{
+  width: 100%;
+}
+
+.site-logo{
+  width:150px;
+  position: absolute;
+}
