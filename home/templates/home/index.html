@@ -224,7 +224,7 @@
 								<div class="review">
 									{% for memo in memos %}
 										<h3>{{ memo.author }}</h3>
-										<p>{{ memo.description }}</p>
+										<p>{{ memo.description | linebreaks }}</p>
 									{% endfor %}
 								</div>
 
@@ -236,7 +236,7 @@
 										{% if is_paginated %}
 										  <ul class="pagination">
 										    {% if page_obj.has_previous %}
-										      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+										      <li><a href="?page={{ page_obj.previous_page_number }}#review">&laquo;</a></li>
 										    {% else %}
 										      <li class="disabled"><span>&laquo;</span></li>
 										    {% endif %}
@@ -248,7 +248,7 @@
 										      {% endif %}
 										    {% endfor %}
 										    {% if page_obj.has_next %}
-										      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+										      <li><a href="?page={{ page_obj.next_page_number }}#review">&raquo;</a></li>
 										    {% else %}
 										      <li class="disabled"><span>&raquo;</span></li>
 										    {% endif %}

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'memo.apps.MemoConfig',
 	'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
