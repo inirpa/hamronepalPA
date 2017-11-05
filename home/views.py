@@ -28,3 +28,10 @@ class HomeView(generic.ListView):
 
 		# memos = paginator.page(page)
 		return context
+
+
+	# def db(request):
+	# 	greeting = Greeting()
+	# 	greeting.save()
+	# 	greetings = Greeting.objects.all()
+	# 	return render(request, 'db.html', {'greetings': greetings})	
