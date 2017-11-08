@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -108,21 +109,21 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
+  
+USE_I18N = True  
+  
+USE_L10N = True  
+  
+USE_TZ = True  
+  
+  
+# Static files (CSS, Ja  vaScript, Images)
+# https://docs.djangopr  oject.com/en/1.11/howto/static-files/
+  
 
-USE_I18N = True
+STATIC_URL = '/static/'  
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-USE_L10N = True
-
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-MEDIA_URL = '/media/'
 
 DATABASES = {
   'default': dj_database_url.config(
@@ -138,6 +139,9 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     # Add to this list all the locations containing your static files 
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
 
 
 # db_from_env = dj_database_url.config(conn_max_age=500)
