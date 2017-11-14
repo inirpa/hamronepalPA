@@ -3,11 +3,18 @@
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
   color: #333;
+  color: white;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-variant: small-caps;
   border-bottom-color: #439348;
   transition: border 1s linear;
   border-bottom: 2px solid transparent;
  /* padding: 0; removing spacing
  /* margin: 14px; add spacing*/
+ border-right: 1px solid white;
+ padding-right: 25px;
+ padding-left: 25px;
 }
 
 
@@ -46,13 +53,14 @@
 }
 
 .btn-home,.btn-mid-section{
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
   border-radius: 0px;
   padding-left: 50px;
   padding-right: 50px; 
   border: #D47970 solid 2px;
   position: absolute;
   font-size: 20px;
+  color: white;
 }
 
 .btn-home:hover,.btn-mid-section:hover{
