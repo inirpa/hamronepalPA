@@ -177,6 +177,13 @@
   .btn-mid-section{
     padding: 10px;
     font-size: 12px;
+  }
+
+  .offer-description img{
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 150px;
   } 
 }
 
