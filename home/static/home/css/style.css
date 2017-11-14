@@ -53,37 +53,41 @@
 }
 
 .btn-home,.btn-mid-section{
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.6);
   border-radius: 0px;
   padding-left: 50px;
   padding-right: 50px; 
   border: #D47970 solid 1px;
-  position: absolute;
   font-size: 20px;
   color: white;
+
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
 }
 
-.btn-home:hover,.btn-mid-section:hover{
+.btn-book{
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 0px;
+  padding-left: 50px;
+  padding-right: 50px; 
+  border: #D47970 solid 1px;
+  font-size: 20px;
+  color: white;
+
+  /*display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;*/
+  
+}
+
+.btn-home:hover,.btn-mid-section:hover, .btn-book:hover{
   background-color: #aa5949;
   color: white;
-}
-
-.mid-section,.col-md-4,.panel-body {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align : center;
-  -moz-box-align    : center;
-  -ms-flex-align    : center;
-  -webkit-align-items : center;
-  align-items : center ;
-  justify-content : center;
-  -webkit-justify-content : center;
-  -webkit-box-pack : center;
-  -moz-box-pack : center;
-  -ms-flex-pack : center;
 }
 
 .panel-body{
@@ -133,21 +137,18 @@
 
 }
 
-.offer-image{
-  width: 50%;
-  padding: 20px;
-}
-
-.offer-image img{
-  width: 100%;
-}
-
 .offer-description{
   text-align: justify;
-  width: 75%;
+  width: 100%;
   padding: 10px;
 }
 
+.offer-description img{
+  width: 250px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  height: 150px;
+}
 
 .header-banner{
   width: 100%;
@@ -165,4 +166,53 @@
 .pagination{
   display: inline;
   border-radius: 0px;
+}
+
+.col-md-4 img{
+  width: 100%;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .btn-mid-section{
+    padding: 10px;
+    font-size: 12px;
+  } 
+}
+
+@media (max-width: 1099px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
 }
