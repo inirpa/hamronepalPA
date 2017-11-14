@@ -192,56 +192,52 @@
 										<button class="btn btn-book" style="float:right;">
 											Book Now
 										</button>
-									</div>
-									
+									</div>									
 								</div>
 							</div>	
-				</div>
-
-				<div class="col-md-6 col-md-offset-0">
-					<div class="panel panel-default">	
-						<div class="panel-body">
-							<div class="offer-description">
-								<img src="static/images/rafting.jpg" align="right">
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-								</p>
-
-								<button class="btn btn-book">
-									Book Now
-								</button>	
-							</div>
 						</div>
-					</div>	
-				</div>
 
-				<div class="col-md-6 col-md-offset-0">
-					<div class="panel panel-default">	
-						<div class="panel-body">
-							<button class="btn btn-home">
-								October Fest
-							</button>
-							<img src="static/images/trekking.jpg" width="100%" height="250px">
-						</div>
-					</div>	
-				</div>
+						<div class="col-md-6 col-md-offset-0">
+							<div class="panel panel-default">	
+								<div class="panel-body">
+									<div class="offer-description">
+										<img src="static/images/rafting.jpg" align="right">
+										<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-				<div class="col-md-6 col-md-offset-0">
-					<div class="panel panel-default">	
-						<div class="panel-body">
-							<button class="btn btn-home">
-								Winter Bonanza
-							</button>
-							<img src="static/images/trekking.jpg" width="100%" height="250px">
+
+										</p>
+
+										<button class="btn btn-book">
+											Book Now
+										</button>	
+									</div>
+								</div>
+							</div>	
 						</div>
-					</div>	
-				</div>	
+
+						<div class="col-md-6 col-md-offset-0">
+							<div class="panel panel-default">	
+								<div class="panel-body">
+									<button class="btn btn-home">
+										October Fest
+									</button>
+									<img src="static/images/trekking.jpg" width="100%" height="250px">
+								</div>
+							</div>	
+						</div>
+
+						<div class="col-md-6 col-md-offset-0">
+							<div class="panel panel-default">	
+								<div class="panel-body">
+									<button class="btn btn-home">
+										Winter Bonanza
+									</button>
+									<img src="static/images/trekking.jpg" width="100%" height="250px">
+								</div>
+							</div>	
+						</div>	
 					</div>
-				</div>
-				
-
-					
+				</div>	
 			</div>	
 		</div>
 	</div>
@@ -295,7 +291,7 @@
 							<div class="col-md-4">
 								<div class="review-image">
 									{% for memo in memos %}
-										<img src="{{ memo.featured_image.url }}" width="100%;">
+										<img src="{{ memo.featured_image.url }}" height="250px;" width="auto">
 									{% endfor %}	
 								</div>
 							</div>
@@ -307,14 +303,39 @@
 	</div>	
 
 	<div class="container-fluid">
-	<div class="bottom-section">
+		<!-- <div class="bottom-section"> -->
 		<div class="row">
 			<div class="col-md-12">
-				<img src ="static/images/PoonHill.jpg" width="100%">
-			</div>	
+				<div class="footer">	
+					<img src ="static/images/PoonHill.jpg" width="100%">
+					<p style="position: absolute; bottom: 0px; display: inline;">
+						HamroNepal designed by Nirpa Hang Rai
+
+						<div style="float: right; font-size: 50px;">
+						<a href="https://www.facebook.com/thenirpa" target="blank">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+
+						<a href="#blog">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+
+						<a href="#blog">
+							<i class="fa fa-youtube" aria-hidden="true"></i>
+						</a>
+						</div>
+
+
+					</p>
+					
+			<!-- <p>HamroNepal designed by Nirpa Hang Rai</p> -->
+
+		</div>		
+			</div>
 		</div>	
-	</div>
-	</div>			
+		<!-- </div>	 -->
+	</div>	
+	
 	{% endfor %}
 
 	<!-- <div class="footer">

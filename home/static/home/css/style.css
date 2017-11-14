@@ -1,4 +1,6 @@
-
+body{
+  background-color: #F5F5F5;
+}
 
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
@@ -109,9 +111,10 @@
 
 .panel-heading{
   color : #D47970 !important;
-  font-size: 45px;
+  font-size: 35px;
   text-decoration: underline;
   text-align: center;
+  font-variant: small-caps;
 }
 
 .memo{
@@ -172,7 +175,59 @@
   width: 100%;
 
 }
+@media only screen and (max-width: 995px) {
+.memo{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 
+  .review{
+  padding-right: 0px;
+  text-align: justify;
+  padding-left: 0px;
+  margin-left: 0px; 
+  
+}
+
+.review-image {
+  display: none;
+}
+
+.h3{
+  font-size: 16px;
+}
+
+.panel-heading{
+  font-size: 20px;
+}
+
+.btn-mid-section, .btn-book{
+    padding-left:  25px;
+    padding-right:  25px;
+    font-size: 14px;
+  }
+
+  .btn-home{
+    font-size: 16px;
+    padding-left:  25px;
+    padding-right:  25px;
+  }
+
+}
+
+.footer{
+  bottom: 0px; 
+  color: white;
+  /*background-image: url('../../images/PoonHill.jpg');*/
+}
+
+
+
+
+
+
+/*for screen size below 500*/
 @media only screen and (max-width: 500px) {
   .btn-mid-section, .btn-book{
     padding: 10px;
@@ -237,6 +292,8 @@
  }
 }
 
+
+/*for screen size below 1099*/
 @media (max-width: 1099px) {
   .navbar-header {
       float: none;
