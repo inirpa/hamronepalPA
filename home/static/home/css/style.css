@@ -338,6 +338,10 @@ body{
 .floating .panel-default .fa:hover{
   text-decoration: none;
 }
+
+.footer p{
+  font-size: 10px;
+}
 }
 
 
