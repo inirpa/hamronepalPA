@@ -2,6 +2,12 @@ body{
   background-color: #F5F5F5;
 }
 
+.navbar-default, .navbar-inverse{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
   color: #333;
