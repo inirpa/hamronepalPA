@@ -8,6 +8,19 @@ body{
   width: 100%;
 }
 
+.floating{
+  position: fixed; 
+  z-index: 999; 
+  margin-top: 20px; 
+  background: rgba(0,0,0,0.2); 
+  border-radius: 3px;
+}
+
+.floating:hover >a {
+  color: white;
+}
+
+
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
   color: #333;
@@ -220,6 +233,18 @@ body{
     padding-right:  25px;
   }
 
+  .floating .panel-default{
+  position: fixed; 
+  z-index: 999; 
+  margin-top: 20px; 
+  background: rgba(0,0,0,0.2); 
+  border-radius: 3px;
+}
+
+.floating:hover >a {
+  color: white;
+}
+
 }
 
 .footer{
@@ -296,6 +321,23 @@ body{
  h3{
   font-size: 18px;
  }
+
+ .floating .panel-default{
+  position: fixed; 
+  z-index: 999; 
+  margin-top: 20px; 
+  background: rgba(0,0,0,0.2); 
+  background: white;
+  border-radius: 3px;
+}
+
+.floating .panel-default .fa{
+  font-size: 25px;
+}
+
+.floating .panel-default .fa:hover{
+  text-decoration: none;
+}
 }
 
 
