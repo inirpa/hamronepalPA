@@ -1,11 +1,14 @@
 body{
   background-color: #F5F5F5;
 }
-
-.navbar-default, .navbar-inverse{
-  position: fixed;
+header{position: relative;}
+.navbar-default{
+  position: absolute;
   z-index: 999;
+  left: 0;
+  bottom: 0px;
   width: 100%;
+  margin: 0;
 }
 
 .floating{
@@ -20,6 +23,14 @@ body{
   color: white;
 }
 
+.floating .col-md-1{
+  width: 100%;
+  background-color: transparent;
+}
+
+.floating .panel-default{
+  background-color: transparent;
+}
 
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
@@ -79,9 +90,10 @@ body{
   padding-left: 50px;
   padding-right: 50px; 
   border: #D47970 solid 1px;
-  font-size: 20px;
+  font-size: 18px;
+  font-variant: small-caps;
   color: white;
-
+  overflow: hidden;
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -90,14 +102,16 @@ body{
 }
 
 .btn-book{
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.2);
   border-radius: 0px;
   padding-left: 50px;
   padding-right: 50px; 
   border: #D47970 solid 1px;
-  font-size: 20px;
+  font-size: 18px;
+  font-variant: small-caps;
   color: white;
 
+  overflow: hidden;
   /*display: inline-block;
   position: absolute;
   top: 50%;
@@ -107,9 +121,43 @@ body{
 }
 
 .btn-home:hover,.btn-mid-section:hover, .btn-book:hover{
-  background-color: #aa5949;
-  color: white;
+ /* background-color: white;*/
+  /*background-color: rgba(1,1,1,0.3);*/
+
+  color: #D47970;
 }
+
+.btn-home::after {
+  content: '';
+  position: absolute;
+  z-index: -990;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+  width: 100%;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.btn-home:hover::after {
+  height: 200%;
+  opacity: 1;
+  overflow: hidden;
+}
+
+/*.btn-home::after{
+  content: '';
+  position: absolute;
+  background-color: white;
+  transform: rotate(25deg);
+}*/
 
 .panel-body{
   padding-right: 0px;
@@ -189,6 +237,11 @@ body{
   display: inline;
   border-radius: 0px;
 }
+
+/*.pagination > .active >span{
+  background-color: rgba(0,0,0,0.9);
+  border-color: black;
+}*/
 
 .col-md-4 img{
   width: 100%;
