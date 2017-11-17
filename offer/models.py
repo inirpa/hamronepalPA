@@ -7,4 +7,5 @@ class BookOffer(models.Model):
 	nationality = models.CharField(max_length = 20)
 	# package_type = models.ChoiceField()
 
-
+	def __str__(self):
+		return self.name + ' - ' + self.email
